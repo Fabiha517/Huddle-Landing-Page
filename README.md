@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/Fabiha517/Huddle-Landing-Page.git)
-- Live Site URL: [Add live site URL here](https://fabiha517.github.io/Huddle-Landing-Page/)
+- Live Site URL: [Add live site URL here](https://Fabiha517.github.io/Huddle-Landing-Page/)
 
 ### Built with
 
