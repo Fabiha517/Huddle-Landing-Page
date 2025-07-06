@@ -1,0 +1,404 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+display: flex;
+	flex-direction: column;
+
+	background-color: hsl(257, 40%, 49%);
+	color: white;
+	min-height: 100vh; /* Full viewport height */
+}
+h1,
+button {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+}
+p {
+	font-family: "open sans", sans-serif;
+}
+.overlapping_images {
+	position: relative;
+	height: 30rem;
+	padding: 1rem 2rem 2rem;
+	margin-bottom: 3rem;
+	padding-bottom: 8rem; /* Creates space for footer */
+	min-height: calc(
+		100vh - 5rem
+	); /* Ensures the section takes full height minus footer */
+}
+.Logo {
+	background-image: url("images/logo.svg");
+	height: 3rem;
+	width: 45%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: left;
+	display: inline-block;
+	z-index: 10;
+	position: relative;
+}
+
+.backgroundImage {
+	background-image: url("images/bg-mobile.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.Illustration {
+	background-image: url("images/illustration-mockups.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	background-position: top;
+	margin-top: 2rem;
+	z-index: 2;
+	top: 1rem;
+	height: 100%;
+	width: 100%;
+}
+main {
+	position: absolute;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0rem 1.5rem;
+	top: 60vh; /* Center vertically */
+}
+main .main_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+main h1 {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+main p {
+	text-align: center;
+	font-size: 0.9rem;
+	font-weight: 200;
+	margin-bottom: 1.5rem;
+	letter-spacing: 0.8px;
+	max-width: 90%;
+}
+button {
+	width: 11rem;
+	height: 2.5rem;
+	border-radius: 2rem;
+	border: none;
+	color: hsl(257, 40%, 49%);
+	font-weight: 300;
+	font-size: 0.7rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+button:hover {
+	background-color: hsl(300, 69%, 71%);
+	color: white;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.footer_wrapper {
+	position: relative;
+	
+	width: 100%;
+	height: 5rem;
+	margin-top: 6rem; /* Adjusted to ensure footer is visible */
+	margin-top: auto;
+padding-bottom: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+footer {
+	/* position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center; */
+	text-align: center;
+	font-size: 0.9rem;
+}
+.icons .fab {
+	margin-left: 0.3rem;
+	height: 2rem;
+	width: 2rem;
+	border: 1px solid white;
+	border-radius: 50%;
+	line-height: 2rem;
+}
+.icons .fab:hover {
+	border-color: hsl(300, 69%, 71%);
+	color: hsl(300, 69%, 71%);
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+@media (max-width: 425px) {
+	main {
+		/* top: 28rem; */
+		top: 65vh;
+	}
+	.footer_wrapper {
+		margin-top: 7rem;
+	}
+}
+
+@media (max-width: 375px) {
+	main {
+		/* top: 25rem; */
+		top: 55vh;
+		margin-bottom: 3rem;
+	}
+	.footer_wrapper {
+		margin-top: 4rem;
+	}
+}
+
+@media (max-width: 320px) {
+	main {
+		/* top: 21rem; */
+		top: 50vh;
+	}
+	footer {
+		font-size: 0.7rem;
+		padding: 0.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+@media (min-width: 768px) {
+	.overlapping_images {
+		padding: 2rem;
+		min-height: auto;
+	}
+	.Logo {
+		height: 3.2rem;
+		width: 30%;
+	}
+	.Illustration {
+		top: 4rem;
+		order: 1;
+		height: 130%;
+
+		width: 60%;
+		background-size: contain;
+		align-self: center;
+		margin-right: 2rem;
+	}
+	.backgroundImage {
+		background-image: url("images/bg-desktop.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		height: calc(100vh + 5rem);
+		z-index: 1;
+	}
+	main {
+		top: 13rem;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: end;
+		margin-right: 1rem;
+	}
+	.main_container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 37%;
+		align-self: flex-end;
+	}
+	main h1 {
+		text-align: left;
+		min-width: 100%;
+		font-size: 1.3rem;
+	}
+	main p {
+		text-align: left;
+		min-width: 100%;
+	}
+	button {
+		margin-right: 5rem;
+		height: 3rem;
+	}
+	.footer_wrapper {
+		display: flex;
+		align-items: end;
+		justify-content: end;
+		z-index: 10;
+		margin-top: 6.5rem;
+	}
+	footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-end;
+		width: 100%;
+		margin-right: 4rem;
+		margin-bottom: 0rem;
+	}
+	.icons .fab {
+		margin-left: 0.5rem;
+	}
+}
+@media (min-width: 1024px) {
+	.main_container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 35%;
+		align-self: flex-end;
+	}
+	main h1 {
+		
+		min-width: 100%;
+	}
+	main p {
+		text-align: left;
+		min-width: 100%;
+		margin-right: 0.9rem;
+		font-size: 1rem;
+	}
+	button {
+		margin-right: 11rem;
+		height: 3.2rem;
+		font-size: 1rem;
+	}
+	.icons .fab {
+		margin-left: 0.5rem;
+	}
+}
+@media (min-width: 1440px) {
+	.Logo {
+		width: 20%;
+		margin-top: 1.7rem;
+	}
+	.Illustration {
+		margin-left: 2rem;
+		width: 58%;
+	}
+
+	main {
+		margin-right: 2rem;
+	}
+	.main_container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 36%;
+		align-self: flex-end;
+	}
+	main h1 {
+		font-size: 2rem;
+	}
+	main p {
+		width: 100%;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		margin-top: 1rem;
+		margin-bottom: 2.5rem;
+	}
+	button {
+		margin-right: 19.2rem;
+		height: 3.5rem;
+		font-size: 1.1rem;
+		border: none;
+	}
+	.footer_wrapper {
+	margin-top: 15rem;
+	}
+	.icons .fab{
+		margin-left: 0.7rem;
+	}
+}
+/* iPhones, Pixels, tall phones */
+@media (max-width: 430px) and (min-height: 820px) {
+	main {
+		top: 22rem;
+	}
+	.footer_wrapper {
+		position: absolute;
+		top: 33rem;
+	}
+}
+
+/* Surface Duo and Foldables */
+@media (max-width: 540px) and (min-height: 720px) {
+	main {
+		top: 70vh;
+	}
+	.footer_wrapper {
+		margin-top: 5rem;
+	}
+}
+/* For tall phones (e.g. iPhone XR, 14 Pro Max, Pixel 7, Samsung A51/A71) */
+@media (min-height: 820px) and (max-width: 450px) {
+	main {
+		top: 28rem;
+	}
+	.footer_wrapper {
+		position: absolute;
+		top: 40rem;
+	}
+}
+
+/* For Galaxy Z Fold and ultra-narrow tall devices */
+@media (max-width: 360px) and (min-height: 850px) {
+	main {
+		top: 45vh;
+	}
+	.footer_wrapper {
+		position: relative;
+		margin-top: 4rem;
+	}
+}/* Narrow + tall (Galaxy Z Fold outer screen) */
+@media (max-width: 360px) and (min-height: 880px) {
+	main {
+		top: 50vh;
+	}
+	.footer_wrapper {
+	position: absolute;
+		top: 80vh;
+		margin-top: 0;
+		padding-bottom: 2rem; /* Adjusted for footer visibility */
+	}
+}
+
+/* Galaxy S8 and similar (360x740) */
+@media (max-width: 370px) and (max-height: 760px) {
+	main {
+		top: 60vh;
+	}
+	.footer_wrapper {
+		margin-top: 4rem;
+	}
+}
+
